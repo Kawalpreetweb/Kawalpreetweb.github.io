@@ -1,0 +1,19 @@
+div{
+     padding:20px;
+     text-decoration:none;
+     text-align: right;
+     word-spacing: 5px; 	
+}
+a{
+	color:red;
+
+}
+img{
+	float:left;
+
+}
+body{
+	background-image:url(https://cdn.pixabay.com/photo/2014/05/02/21/49/home-office-336373_960_720.jpg); 
+	background-size: cover;
+	color:white;
+}
