@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Input Attributes</h1>
+	<form method="get">
+		<table>
+			<tr>
+				<td>Credit Card</td>
+				<td><input type="text" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"></td>
+			</tr>
+			<tr>
+				<td>City</td>
+				<td><input type="text"  list="citylist"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit"">
+				</td>
+			</tr>
+		</table>
+		<datalist id="citylist">
+			<option>New Delhi</option>
+			<option>Chennai</option>
+			<option>Kolkata</option>
+			<option>Mumbai</option>
+			<option>Bengaluru</option>
+			<option>Gurugram</option>
+		</datalist>
+	</form>
+</body>
+</html>
