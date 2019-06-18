@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	*{
+		padding:0px;
+		margin:0px;
+	}
+		#submit-group{
+			width:160px;
+			height:40px;
+			position:relative;
+		}
+		#submit-group input{
+			position:absolute;
+			width: 160px;
+			height:40px;
+			top:0px;
+			left:0px;
+		}
+		#submit-group p
+		{
+			position:absolute;
+			width:100px;
+			bottom:-20px;
+			right:0px;
+			visibility: hidden;
+			border:1px solid black;
+		}
+		#submit-group:active p
+		{
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<div id="submit-group">
+		<input type="submit">
+		<p>submit form</p>
+	</div>
+
+</body>
+</html>
