@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#banner{
+			height:300px;
+			width:100%;
+			background-color:dodgerblue;	
+			position: relative;		
+		}
+
+		#left-arrow{
+			width:25px;
+			height:25px;
+			background-color:rgba(0,0,0,.5);
+			position: absolute;
+			border-radius: 50%;
+			top:137.5px;
+			left:10px;
+		}
+
+		#right-arrow{
+			width:25px;
+			height:25px;
+			background-color:rgba(0,0,0,.5);
+			position: absolute;
+			border-radius: 50%;
+			top:137.5px;
+			right:10px;
+		}
+
+
+		#thumbnails-container
+		{
+			position: absolute;
+			height:35px;
+			bottom:0px;
+			width:100%;
+			text-align: center;
+			background-color: rgba(0,0,0,.5);
+			padding:5px;
+			box-sizing: border-box;
+		}
+
+		#thumbnails-container img{
+			width:25px;
+			height:25px;
+			border-radius: 50%;
+		}
+
+		body{
+			height:6000px;
+		}
+
+		#gotop
+		{
+			height:40px;
+			width:40px;
+			border-radius: 50%;
+			background-color:rgba(0,0,0,0.5);
+			position: fixed;
+			bottom:100px;
+			right:100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<div id="left-arrow"></div>
+		<div id="right-arrow"></div>		
+		<div id="thumbnails-container">
+			<img src="desert.jpg">
+			<img src="desert.jpg">
+			<img src="desert.jpg">
+			<img src="desert.jpg">
+			<img src="desert.jpg">
+		</div>
+	</div>
+	<div id="gotop">		
+	</div>
+</body>
+</html>
