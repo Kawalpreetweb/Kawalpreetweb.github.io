@@ -1,0 +1,5 @@
+Content Box :
+ width of each element= 2*(padding+border+margin)
+
+Border Box :
+ width of each element= 2*(margin) excluding[padding , border]
