@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Form</title>
+	<style>
+		#page{
+			background-color:lightseagreen;
+			border:1px solid black;
+			width:1000px;
+			height:1000px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		#register{
+			background-color:white;
+			border:1px solid black;
+			height:500px;
+			width:400px;
+			float:left;
+			position: absolute;
+			top:250px;
+			right:200px;
+			box-sizing: border-box;
+
+
+					}
+		#login{
+			background-color:white;
+			border:1px solid black;
+			height:500px;
+			width:400px;
+			float:left;
+			position:absolute;
+			top:250px;
+			left:200px;
+			box-sizing:border-box;
+					}
+		.icon1{
+			background-color:purple;
+			width:100%;
+			height:80px;
+			padding-bottom:20px;
+
+		}
+				.icon1>img{
+			width:40px;
+			height:40px;
+			border-radius:50%;
+		    margin-left: auto;
+		    margin-right:auto;
+		    display: block;
+		    padding-top:10px;
+
+
+		}
+		.icon1 #internal{
+			text-align: center;
+			color:white;
+
+		}
+		.content #name{
+			background-image: url("icons8-male-user-50.png");
+		    background-repeat: no-repeat;
+		    width:270px;
+		    height:30px;
+		    padding-left:15px;
+		    background-size:25px;
+		    margin-top:30px;
+		    text-align: center;
+		    margin-left:50px;
+		
+
+		}
+		.content #Password{
+			background-image: url("icons8-lock-24.png");
+		    background-repeat: no-repeat;
+		    width:270px;
+		    height:30px;
+		    padding-left:15px;
+		    background-size:25px;
+		    margin-top:20px;
+		    text-align: center;
+		    margin-left:50px;
+		
+
+		}
+		.content #re-Password{
+			background-image: url("icons8-lock-24.png");
+		    background-repeat: no-repeat;
+		    width:270px;
+		    height:30px;
+		    padding-left:15px;
+		    background-size:25px;
+		    margin-top:20px;
+		    text-align: center;
+		    margin-left:50px;
+		
+
+		}
+		.content #email{
+			background-image: url("icons8-envelope-24.png");
+		    background-repeat: no-repeat;
+		    width:270px;
+		    height:30px;
+		    padding-left:15px;
+		    background-size:25px;
+		    margin-top:20px;
+		    text-align: center;
+		    margin-left:50px;
+
+		
+
+		}
+		.content #checkbox{
+		    padding-left:15px;
+		    margin-top:20px;
+		    text-align: center;
+		    margin-left:50px;
+		}
+		.content span{
+			color:red;
+		}
+		.content #button{
+		    padding-left:15px;
+		    margin-top:20px;
+		    text-align: center;
+		    margin-left:50px;
+		    background-color:purple;
+		    width:270px;
+		    height:30px;
+		}
+		.content p{
+		    padding-left:15px;
+		    margin-top:20px;
+		    text-align: left;
+		    margin-left:40px;
+		}
+		.icon2{
+			background-color:gold;
+			width:100%;
+			height:80px;
+			padding-bottom:20px;
+
+
+		}
+		.icon2>img{
+			width:40px;
+			height:40px;
+			border-radius:50%;
+		    margin-left: auto;
+		    margin-right:auto;
+		    display: block;
+		    padding-top:10px;
+
+
+		}
+		.icon2 #interna2{
+			text-align: center;
+			color:white;
+		
+
+		
+	</style>
+</head>
+<body>
+<div id="page">
+	<div id="register">
+		<div class="icon1">
+			<img src="register1.png">
+			 <div  id="internal">
+			   <h3>REGISTER</h3>
+		     </div>
+		</div>
+	            <div class="content">
+	            	<input id="name" type="text" name="Name" placeholder="Username">
+	            	<input id="Password" type="text" name="passwrd" placeholder="Password">
+	            	<input id="re-Password" type="text" name="re-passwrd" placeholder="Re-Enter Password">
+	            	<input id="email" type="email" placeholder="Please enter the email">
+	            	<input id="checkbox" type="checkbox" name="checkbox" checked="">I agree to the <span>Terms of services</span>
+	            	<input id="button" type="submit" name="SIGN UP">
+	            	<p>Already a member ? login here</p>
+
+
+	             </div>
+	</div>
+	<div id="login">
+		<div id="icon2">
+			<img src="lock.png">
+			<div id="internal2">
+				<h3>LOGIN</h3>
+				
+			</div>
+	</div>
+</div>
+</body>
+</html>
