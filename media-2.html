@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#sec-1{
+			height:40px;
+			background-color:red;
+		}
+
+		#sec-2{
+			height:40px;
+			background-color:blue;
+		}
+
+		#sec-3{
+			height:40px;
+			background-color:green;
+		}
+
+		@media (min-width:700px){
+			#sec-1,#sec-2{
+				float:left;
+				width:50%;
+			}
+
+			#sec-3{
+				float:left;
+				width:100%;
+			}
+		}
+
+		@media (min-width: 1000px){
+			#sec-1,#sec-2,#sec-3{
+				float:left;
+				width:33.33%;
+			}			
+		}
+
+		@media (max-width: 500px){
+			#banner{
+				display:none;
+			}
+		}
+
+		#banner{
+			clear:both;
+			height:300px;
+			width: 100%;
+			background-image: url('css-webform.jpg');
+		}
+
+	</style>
+</head>
+<body>
+	<div="header">
+		<div id="sec-1">
+		</div>
+		<div id="sec-2">
+		</div>
+		<div id="sec-3">
+		</div>
+	</div="header">
+	<div id="banner">
+	</div>
+</body>
+</html>
