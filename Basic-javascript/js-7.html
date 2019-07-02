@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: calibri;
+			font-weight: 800;
+		}
+		#menu{
+			height: 40px;
+			background-color: #2874f0;
+		}
+		#login-btn{
+			display: inline-block;
+			float:right;
+			margin-right:300px;
+			height:100%;
+			color:white;
+			font-size:20px;
+			padding-top:6px;
+			box-sizing: border-box;
+			cursor: pointer;	
+		}
+
+		#overlay{
+			position: absolute;
+			top:0px;
+			left:0px;
+			height:100%;
+			width:100%;
+			background-color: rgba(0,0,0,0.67);
+			visibility: hidden;
+		}
+
+		#login-box{
+			position: absolute;
+			height:400px;
+			width:600px;
+			top:160px;
+			left:400px;
+			background-color: white;
+		}
+
+		#close{
+			position: absolute;
+			display: block;
+			font-size:30px;
+			top:140px;
+			left:1020px;
+			cursor: pointer;
+		}
+	</style>
+
+	<script>
+		function Show(){
+			document.getElementById('overlay').style="visibility:visible";
+		}
+
+		function Hide(){
+			document.getElementById('overlay').style="visibility:hidden";
+		}
+	</script>
+</head>
+<body>
+	<div id="overlay">
+		<div id="login-box">
+		</div>
+		<span id="close" onclick="Hide();">X</span>
+	</div>
+	<div id="menu">
+		<span id="login-btn" onclick="Show();">Login & Register</span>
+	</div>
+</body>
+</html>

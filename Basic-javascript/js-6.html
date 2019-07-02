@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function UpdateQty()
+		{
+			qty=Number(document.getElementById('qty').value);
+			price=qty*15500;
+			document.getElementById('result').innerHTML="₹ " + price;
+		}
+	</script>
+</head>
+<body>
+	₹ 15500 X <input id="qty" type="number" onchange="UpdateQty();"> = <output id="result">₹ 15500</output>
+</body>
+</html>
