@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#book{
+			height:300px;
+			width:200px;
+			background-color:lightgray;
+		}
+	</style>
+
+	<script>
+		function Toggle()
+		{
+			bookmark=document.getElementById('bookmark');
+			if(bookmark.src.match("black"))
+			{
+				bookmark.src="bookmark_white.png";
+			}
+			else
+			{
+				bookmark.src="bookmark_black.png";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="book">
+		<img id="bookmark" src="bookmark_black.png" onclick="Toggle();">
+	</div>
+</body>
+</html>
+
+

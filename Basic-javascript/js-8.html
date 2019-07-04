@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#toggle{
+			border:1px solid black;
+			border-radius: 40px;
+			height:40px;
+			width:120px;
+			padding-top:4px;
+			padding-bottom:4px;
+			box-sizing: border-box;
+			padding-left:5px;
+			padding-right:5px;
+		}
+
+		#btn{
+			height:30px;
+			width:30px;
+			border-radius:50%;
+			background-color:white;
+		}
+
+		.on{
+			background-color:green;
+		}
+
+		.off{
+			background-color:red;
+		}
+
+		.off #btn{
+			float:right;
+		}
+
+		.on #btn{
+			float:left;
+		}
+	</style>
+
+	<script>
+		function Toggle(){
+			toggle=document.getElementById('toggle');
+			if(toggle.getAttribute('class')=='on')
+			{
+				toggle.setAttribute('class','off');
+			}
+			else
+			{
+				toggle.setAttribute('class','on');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="toggle" class="off" onclick="Toggle();">
+		<div id="btn">
+		</div>
+	</div>
+
+</body>
+</html>
