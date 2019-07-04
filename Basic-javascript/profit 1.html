@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function check(){
+			result=document.getElementById('result');
+		a=document.getElementById('sell');
+		b=document.getElementById('cost');
+		if(Number(a.value)>Number(b.value)){
+			result.innerHTML=Number(a.value)-Number(b.value);
+			result.style='color:green';
+		}
+			else{
+				result.innerHTML=Number(b.value)-Number(a.value);
+				result.style='color:red';
+			}
+
+		}
+	
+	</script>
+</head>
+<body>
+Selling Price <input type="text" id="sell">
+Cost Price <input type="text" id="cost">
+<input type="button" value="check" onclick="check();">
+<h1 id="result"></h1>
+</body>
+</html>
