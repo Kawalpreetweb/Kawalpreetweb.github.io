@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#input
+		{
+			position: absolute;
+			background-color:lightgray;
+			border-radius: 10px;
+			height:40%;
+			width:40%;
+			top:30%;
+			left:30%;
+			padding:30px;
+			box-sizing: border-box;
+		}
+		#output
+		{
+			position: absolute;
+			background-color:lightgray;
+			border-radius: 10px;
+			height:60%;
+			width:50%;
+			top:20%;
+			left:25%;
+			padding:30px;
+			box-sizing: border-box;
+			display:none;
+		}
+
+		table{
+			width:100%;
+		}
+
+		input, select{
+			width:100%;
+		}
+
+		input[type="button"]{
+			width: auto;
+		}
+
+		td[colspan="2"], th[colspan="2"]{
+			border-bottom: 1px solid black;
+		}
+
+
+		td:nth-child(2){
+			text-align: right;
+		}
+	</style>
+
+	<script type="text/javascript">
+		function Calculate()
+		{
+			name=document.getElementById('name').value;
+			rank=Number(document.getElementById('rank').value);
+			basic=Number(document.getElementById('basic').value);
+
+			if(rank==1)
+			{
+				hra=basic*.60;
+				da=basic*.70;
+				pf=basic*.12;
+			}
+			else if(rank==2)
+			{
+				hra=basic*.40;
+				da=basic*.50;
+				pf=basic*.12;
+			}
+			else if(rank==3)
+			{
+				hra=basic*.20;
+				da=basic*.20;
+				pf=basic*.12;
+			}
+			else
+			{
+				hra=0;
+				da=basic*.1;
+				pf=0;
+			}
+
+			gross=hra+da+basic;
+			net=gross-pf;
+
+
+			document.getElementById('oname').innerHTML=name;
+			document.getElementById('orank').innerHTML=rank;
+			document.getElementById('obasic').innerHTML=basic;
+			document.getElementById('ohra').innerHTML=hra;
+			document.getElementById('oda').innerHTML=da;
+			document.getElementById('opf').innerHTML=pf;
+			document.getElementById('onet').innerHTML=net;
+
+			document.getElementById('input').style="display:none";
+			document.getElementById('output').style="display:block";
+			}
+		
+	</script>
+</head>
+<body>
+	<div id="input">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type="text" id="name">
+			</tr>
+			<tr>
+				<td>Rank</td>
+				<td><select id="rank">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Salary</td>
+				<td><input type="text" id="basic"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="right"><input type="button" value="Calculate" onclick="Calculate();"></td>
+			</tr>
+		</table>
+	</div>
+	<div id="output">
+		<table>
+			<tr>
+				<th colspan="2">Salary Slip</th>
+			</tr>
+			<tr>
+				<td>Name</td>
+				<td><output id='oname'></output></td>
+			</tr>
+			<tr>
+				<td>Rank</td>
+				<td><output id='orank'></output></td>
+			</tr>
+			<tr>
+				<td>Basic</td>
+				<td><output id="obasic"></output></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">Allowances</td>
+			</tr>
+			<tr>
+				<td>HRA</td>
+				<td><output id='ohra'></output></td>
+			</tr>
+			<tr>
+				<td>DA</td>
+				<td><output id="oda"></output></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">Deductions</td>
+			</tr>
+			<tr>
+				<td>PF</td>
+				<td><output id='opf'></output></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">Net Salary</td>
+			</tr>
+			<tr>
+				<td>Net Salary</td>
+				<td><output id='onet'></output></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
