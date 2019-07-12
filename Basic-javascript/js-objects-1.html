@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1" id="records">
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Course</td>
+			<td>Fees</td>
+		</tr>
+	</table>
+
+	<script>
+		student={
+			id:1,
+			name:'Girish Attri',
+			course:'Java',
+			fees:16000
+		};
+
+		records=document.getElementById('records');
+		records.innerHTML="<tr><td>"+student.id+"</td><td>"+student.name+"</td><td>"+student.course+"</td><td>"+student.fees+"</td></tr>";
+
+		xyz(student)
+	</script>
+</body>
+</html>

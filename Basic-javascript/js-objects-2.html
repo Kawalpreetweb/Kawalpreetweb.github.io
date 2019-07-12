@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1" id="records">
+		<tr>
+			<td>Id</td>
+			<td>Name</td>
+			<td>Course</td>
+			<td>Fees</td>
+		</tr>
+	</table>
+
+	<script>
+		students=[{
+			id:1,
+			name:'Girish Attri',
+			course:'Java',
+			fees:16000
+		},
+		{
+			id:2,
+			name:'Ravi Verma',
+			course:'Python',
+			fees:15000
+		}];
+
+		records=document.getElementById('records');
+		for(i=0;i<2;i++)
+		{
+		records.innerHTML+="<tr><td>"+students[i].id+"</td><td>"+students[i].name+"</td><td>"+students[i].course+"</td><td>"+students[i].fees+"</td></tr>";
+	}
+	</script>
+</body>
+</html>	
