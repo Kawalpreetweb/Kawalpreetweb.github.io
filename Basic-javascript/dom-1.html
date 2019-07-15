@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Document - anchor Property</h1>
+
+	<a href="http://www.google.com">Home</a>
+	<a href="#">Product</a>
+	<a href="#">Client</a>
+
+	<input type="button" value="Remove Links" onclick="Remove();">
+
+	<script>
+		function Remove()
+		{
+			a=document.links;
+			for(i=0;i<a.length;i++)
+			{
+				a[i].style.display='None';
+			}
+		}
+	</script>
+</body>
+</html>

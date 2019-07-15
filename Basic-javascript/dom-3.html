@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#page{
+			clear:both;
+		}
+		.box{
+			height:300px;
+			width:200px;
+			border:1px solid black;
+			margin:10px;
+			float:left;
+		}
+	</style>
+	<script>
+		function Add()
+		{
+			//Create new element
+			//t=document.createElement('input');	
+			//t.setAttribute('type','submit');	
+			//document.body.appendChild(t);
+			t=document.createElement('div');
+			t.setAttribute('class','box');
+			document.getElementById('page').appendChild(t);
+		}
+	</script>
+</head>
+<body>
+	<h1>Adding New Elements to the Page</h1>
+	<div id="page">
+	</div>
+	<div style="clear:both">
+		<input type="button" value="Add Element" onclick="Add();">
+	</div>
+</body>
+</html>
