@@ -1,0 +1,69 @@
+Document Object Model
+
+DOM is a tree like structure where each element is represented as a node in the tree. DOM helps in manipulating the structure of page/element. Such as applying styles to the element, removing styles from the element etc. New elements can also be added to or removed from the DOM tree.
+
+Types of Nodes in the DOM tree:
+
+
+1. Element Node
+2. text node
+3. comment node
+4. attribute node
+
+
+DOM representation
+
+<html>
+	<head>
+		<title>My Title</title>
+	</head>
+	<body>
+		<h1>My Header</h1>
+		<a href="#">My Link</a>
+	</body>
+</html>
+
+
+
+
+DOM : dom or document object model is a w3c standard which helps the programmer to change the structure of the page and/or its elements.
+
+
+
+
+document object properties:
+
+
+1. anchors
+
+e.g
+a=document.anchors;
+
+2. links
+3. body
+4. forms
+5. head
+6. images
+
+document.images[0].src="";
+
+7. scripts
+8. title
+
+
+
+Functions:
+
+
+1. getElementById('id')
+2. getElementsByTagName('tag')
+3. getElementsByClassName('class')
+4. setAttribute('attribute','value');
+	e.g. document.getElementById('heading').setAttribute('class','heading');
+5. getAttribute('attribute');
+6. createElement('tag');
+
+
+
+
+
