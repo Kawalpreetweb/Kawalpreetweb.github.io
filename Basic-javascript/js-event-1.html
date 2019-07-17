@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		input{
+			text-align: right;
+		}
+		table{
+			border:1px solid black;
+		}
+		th{
+			border-bottom:1px solid black;
+			border-right:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Event Binding in HTML</h1>
+	<table>
+		<tr>
+			<th colspan="3"><input id="number" type="text"></th>
+		</tr>
+		<tr>
+			<th onclick="Display(1);">1</th>
+			<th onclick="Display(2);">2</th>
+			<th onclick="Display(3);">3</th>
+		</tr>
+		<tr>
+			<th onclick="Display(4);">4</th>
+			<th onclick="Display(5);">5</th>
+			<th onclick="Display(6);">6</th>
+		</tr>
+		<tr>
+			<th onclick="Display(7);">7</th>
+			<th onclick="Display(8);">8</th>
+			<th onclick="Display(9);">9</th>
+		</tr>
+		<tr>
+			<th onclick="Display(-1);">C</th>
+			<th onclick="Display(0);">0</th>
+			<th>.</th>
+		</tr>
+	</table>
+
+	<script>
+		function Display(data)
+		{
+			number=document.getElementById('number');
+
+			if(data==-1)
+			{
+				number.value="0";
+			}
+			else if(number.value=="")
+			{
+				number.value=data;
+			}
+			else
+			{
+				number.value+=data;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	*{
+		margin:0px;
+	}
+	.product{
+		width:240px;
+		height:300px;
+		border:1px solid black;
+		background-color:green;
+		float:left;
+	}
+	img{
+		width:200px;
+		height:200px;
+	}
+</style>
+	
+</head>
+<body>
+<script>
+
+	data=[
+		{
+			name:'Apple Iphone XS',
+			src:'Desert.jpg',
+			price:45000
+		},
+		{
+			name:'One plus',
+			src:'Koala.jpg',
+			price:23000
+		},
+		{
+			name:'honor',
+			src:'Tulips.jpg',
+			price:78000
+		},
+	];
+
+
+
+
+	for(i=0;i<3;i++)
+	{
+
+	d=document.createElement('div');
+	d.setAttribute('class','product');
+	
+	img=document.createElement('img');
+	img.src=data[i].src;
+	d.appendChild(img);
+
+	h1=document.createElement('h1');
+	h1.innerHTML='Heading';
+	d.appendChild(h1);
+
+	h3=document.createElement('h3');
+	h3.innerHTML='Heading3';
+	d.appendChild(h3);
+
+	document.body.appendChild(d);
+
+}
+</script>
+</body>
+</html>

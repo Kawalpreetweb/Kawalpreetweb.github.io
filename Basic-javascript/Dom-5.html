@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	*{
+		margin:0px;
+	}
+	#product{
+		width:500px;
+		height:500px;
+		border:1px solid black;
+		background-color:green;
+	}
+	img{
+		width:200px;
+		height:200px;
+	}
+	
+</style>
+
+</head>
+<body>
+
+	
+	<script>
+	d=document.createElement('div');
+	d.setAttribute('class','product');
+	
+	i=document.createElement('img');
+	i.setAttribute('src','Desert.jpg');
+d.appendChild(i);
+
+	
+	head1=document.createElement('h1');
+	head1.innerHTML='Heading';
+d.appendChild(head1);
+
+	head3=document.createElement('h3');
+	head3.innerHTML='Price';
+d.appendChild(head3);
+
+	document.body.appendChild(d);
+
+
+	
+	</script>
+</body>
+</html>
