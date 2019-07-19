@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<h1>Changing the Style of an Element</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p> 
+	<p>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> 
+	<p>Excepteur sin occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<input type="button" value="Green" onclick="Green();">
+	<input type="button" value="Blue" onclick="Blue();">
+	<input type="button" value="Red" onclick="Red();">
+
+	<script>
+		function Green(){
+			/*
+			paras=document.getElementsByTagName('p');
+			for(i=0;i<paras.length;i++){
+				paras[i].style.color='green';
+			}
+			*/
+			$('p').css('color','green');
+		}
+		function Blue(){
+			/*
+			paras=document.getElementsByTagName('p');
+			for(i=0;i<paras.length;i++){
+				paras[i].style.color='blue';
+			}
+			*/
+			$('p').css('color','blue');			
+		}
+		function Red(){
+			/*
+			paras=document.getElementsByTagName('p');
+			for(i=0;i<paras.length;i++){
+				paras[i].style.color='red';
+			}
+			*/
+			$('p').css('color','red');
+		}
+	</script>
+</body>
+</html>

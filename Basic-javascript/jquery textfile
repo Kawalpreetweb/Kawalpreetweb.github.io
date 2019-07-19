@@ -1,0 +1,55 @@
+Javascript V/s Jquery - A Quick Reference
+
+
+#Accessing DOM Elements
+
+1. 
+JS : document.getElementById('id')
+or
+JQ : $('#id')
+
+
+2. 
+JS : document.getElementsByTagName('tag')
+or
+JQ : $('tag')
+
+
+3. 
+JS : document.getElementsByClassName('class');
+or
+JQ : $('.class')
+
+
+
+# Manipulating HTML
+
+document.getElementById('para').innerHTML='text';
+or
+$('#para').html('text');
+
+
+# Applying CSS
+
+document.getElementById('para').style.color='red';
+or
+$('#para').css('color','red');
+
+
+# Accessing Input Control's values
+
+name=document.getElementById('name').value;
+or
+name=$('#para').val();
+
+
+
+# Performing Chained Tasks
+
+document.getElementById('para').style.color='red';
+document.getElementById('para').style.backgroundColor='orange';
+document.getElementById('para').style.border='1px solid black';
+or
+$('#para').css('color','red').css('background-color','orange').('border','1px solid black');
+
+
