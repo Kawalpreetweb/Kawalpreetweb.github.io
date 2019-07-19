@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2 id=head></h2>
+<input type="text" id="text1">
+<input type="text" id="text2">
+<input type="button" value="add" onclick="add();">
+<script src="jquery.js">
+</script>
+<script>
+		function add(){
+		a=$('#text1').val();
+		b=$('#text2').val();
+		c=parseInt(a)+parseInt(b);
+		$('#head').html(c);
+
+	}
+</script>
+</body>
+</html>
