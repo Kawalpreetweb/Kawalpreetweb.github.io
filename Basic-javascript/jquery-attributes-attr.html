@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>	
+	<img id="image" height="300px" width="240px"> <br>
+	<input id="img1" type="button" value="Image 1">
+	<input id="img2" type="button" value="Image 2">
+	<input id="img3" type="button" value="Image 3">
+
+	<script>
+		$('#img1').click(function(){
+			$('#image').attr('src','banner-1.jpg');
+		});
+		$('#img2').click(function(){
+			$('#image').attr('src','banner-2.jpg');
+		});
+		$('#img3').click(function(){
+			$('#image').attr('src','banner-3.jpg');
+		});
+	</script>
+</body>
+</html>

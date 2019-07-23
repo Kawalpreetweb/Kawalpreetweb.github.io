@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<div style="height:300px">
+	<img src="banner-1.jpg" id="image" height="300px" width="100%">
+	</div>
+	
+
+	<input type="button" value="Show" id="show">
+	<input type="button" value="Hide" id="hide">
+
+	<script>
+		$('#show,#hide').click(function(){
+			// $('#image').slideToggle(5000).delay(1000);
+			$( "#image" ).animate({
+    				opacity: 0.25,
+    				width: "toggle"
+  				}, 5000, function() {
+ 			 });
+		});
+	</script>
+</body>
+</html>
