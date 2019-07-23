@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<style>
+		#toggle{
+			border:1px solid black;
+			border-radius: 40px;
+			height:40px;
+			width:120px;
+			padding-top:4px;
+			padding-bottom:4px;
+			box-sizing: border-box;
+			padding-left:5px;
+			padding-right:5px;
+			background-color:green;
+		}
+
+		#btn{
+			height:30px;
+			width:30px;
+			border-radius:50%;
+			background-color:white;
+			float:left;
+		}
+
+	
+		.off{
+			background-color:red !important;			
+		}
+
+		.off #btn{
+			float:right;
+		}
+
+	
+	</style>
+
+</head>
+<body>
+	<div id="toggle">
+		<div id="btn">
+		</div>
+	</div>
+
+	<script>
+		$('#toggle').click(function(){
+			/*
+			if($('#toggle').hasClass('off'))
+			{
+				$('#toggle').removeClass('off');
+			}
+			else
+			{
+				$('#toggle').addClass('off');
+			}
+			*/
+			$('#toggle').toggleClass('off');
+		});
+	</script>
+
+</body>
+</html>
