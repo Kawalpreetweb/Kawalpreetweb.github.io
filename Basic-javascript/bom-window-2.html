@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="counter">01:00:00</h1>
+
+	<script>
+		task=window.setInterval(Update,990);
+		counter=3600;
+
+		function Update(){
+			counter--;
+
+			value=counter;
+			hours=parseInt(value/3600);
+			value=value%3600;
+			minutes=parseInt(value/60);
+			value=value%60;
+			seconds=value;
+
+			output="";
+
+			if(hours<10)
+			{
+				output+="0"+hours;
+			}
+			else
+			{
+				output+=hours;
+			}
+
+			output+=":";
+
+			if(minutes<10)
+			{
+				output+="0"+minutes;
+			}
+			else
+			{
+				output+=minutes;
+			}
+
+			output+=":";
+
+			if(seconds<10)
+			{
+				output+="0"+seconds;
+			}
+			else
+			{
+				output+=seconds;
+			}
+
+			document.getElementById('counter').innerHTML=output;
+
+			if(counter==0)
+			{
+				window.clearInterval(task);
+			}
+		}
+	</script>
+</body>
+</html>

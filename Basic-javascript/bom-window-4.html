@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="button" value="Alert" onclick="ShowAlert();">
+	<input type="button" value="Confirm" onclick="ShowConfirm();">
+	<input type="button" value="Prompt" onclick="ShowPrompt();">
+
+	<script>
+		function ShowAlert(){
+			alert("Record Deleted Successfully");
+		}
+
+		function ShowConfirm(){
+			result=confirm("Do you really wish to delete this record?");
+			if(result==true){
+				alert("Record Deleted Successfully");
+			}
+			else{
+				alert("Record Delete Cancelled by user");
+			}
+		}
+
+		function ShowPrompt(){
+			age=prompt("Enter Your Age : ", 0);
+			alert(age);
+		}
+	</script>
+</body>
+</html>

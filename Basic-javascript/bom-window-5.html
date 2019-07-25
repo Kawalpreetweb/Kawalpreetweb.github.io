@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<div id="floater" style="position: fixed;top:0px;left:0px;">
+		<input type="button" value="Previous Page" onclick="ScrollPrev();">
+		<input type="button" value="Next Page" onclick="ScrollNext();">
+	</div>
+
+		<div id="page1" style="height:600px;background-color:red;">
+		</div>
+
+		<div id="page2" style="height:600px;background-color:green;">
+		</div>
+
+		<div id="page3" style="height:600px;background-color:blue;">
+		</div>
+
+		<div id="page4" style="height:600px;background-color:gray;">
+		</div>
+
+		<div id="page5" style="height:600px;background-color:cyan;">
+		</div>
+
+		<script>
+			page=1;
+
+			function ScrollNext(){
+				if(page<5){
+					page++;
+				}
+				window.scrollTo(0,(page-1)*600);
+			}
+
+			function ScrollPrev(){
+				if(page>0){
+					page--;
+				}
+				window.scrollTo(0,(page-1)*600);
+			}
+		</script>
+</body>
+</html>

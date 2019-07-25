@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	This window will be closed in 10 seconds.
+	<input type="button" value="Click here to cancel" onclick="Cancel();">
+
+	<script>
+		task=setTimeout(close,10000);
+
+		function Cancel(){
+			clearTimeout(task);
+		}
+	</script>
+</body>
+</html>
