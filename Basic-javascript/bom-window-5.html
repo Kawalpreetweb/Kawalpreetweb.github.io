@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
 
+	<title></title>
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+	}
+
+	.page{
+		width:100%;
+		height:600px;
+	}
+	</style>
 </head>
 <body>
 	<div id="floater" style="position: fixed;top:0px;left:0px;">
@@ -10,36 +21,43 @@
 		<input type="button" value="Next Page" onclick="ScrollNext();">
 	</div>
 
-		<div id="page1" style="height:600px;background-color:red;">
+		<div id="page1" class="page" style="background-color:red;">
 		</div>
 
-		<div id="page2" style="height:600px;background-color:green;">
+		<div id="page2" class="page" style="background-color:green;">
 		</div>
 
-		<div id="page3" style="height:600px;background-color:blue;">
+		<div id="page3" class="page" style="background-color:blue;">
 		</div>
 
-		<div id="page4" style="height:600px;background-color:gray;">
+		<div id="page4" class="page" style="background-color:gray;">
 		</div>
 
-		<div id="page5" style="height:600px;background-color:cyan;">
+		<div id="page5" class="page" style="background-color:cyan;">
 		</div>
 
 		<script>
+			pagesize=window.innerHeight;
+			pages=document.getElementsByClassName('page');
+
+			for(i=0;i<pages.length;i++){
+				pages[i].style.height=pagesize+"px";
+			}
+
 			page=1;
 
 			function ScrollNext(){
 				if(page<5){
 					page++;
 				}
-				window.scrollTo(0,(page-1)*600);
+				window.scrollTo(0,(page-1)*pagesize);
 			}
 
 			function ScrollPrev(){
 				if(page>0){
 					page--;
 				}
-				window.scrollTo(0,(page-1)*600);
+				window.scrollTo(0,(page-1)*pagesize);
 			}
 		</script>
 </body>
