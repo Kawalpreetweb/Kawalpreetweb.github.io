@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>User Location</h1>
+	<p>
+		Latitude : <output id="latitude">0.00</output> <br>
+		Longitude : <output id="longitude">0.00</output> <br>
+	</p>
+
+	<input type="button" value="Request Location" onclick="RequestLocation();">
+
+	<script>
+		function RequestLocation(){
+			navigator.geolocation.getCurrentPosition(Success,Failed);
+		}
+
+		function Success(position){
+		 	document.getElementById('latitude').innerHTML=position.coords.latitude;
+			document.getElementById('longitude').innerHTML=position.coords.longitude;
+		}
+
+		function Failed(error){
+
+		}
+	</script>
+</body>
+</html>

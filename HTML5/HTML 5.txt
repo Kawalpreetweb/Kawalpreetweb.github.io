@@ -1,0 +1,106 @@
+HTML 5
+
+
+HTML 5 was first released in public-facing form on 22 January 2008, with a major update and "W3C Recommendation" status in October 2014. Its goals are to improve the language with support for the latest multimedia and other new features; to keep the language both easily readable by humans and consistently understood by computers and devices such as Web browsers, parsers, etc.
+
+Many new syntactic features are included. To natively include and handle multimedia and graphical content, the new <video>, <audio> and <canvas> elements were added, and support for scalable vector graphics (SVG) content and MathML for mathematical formulas. To enrich the semantic content of documents, new page structure elements such as <main>, <section>, <article>, <header>, <footer>, <aside>, <nav>, and <figure> are added. New attributes are introduced, some elements and attributes have been removed, and others such as <a />, <cite>, and <menu> have been changed, redefined, or standardized. 
+
+The APIs and Document Object Model (DOM) are now fundamental parts of the HTML 5 specification and HTML 5 also better defines the processing for any invalid documents.
+
+
+HTML 5 Symantic Tags.
+
+1. <header>
+2. <nav>
+3. <footer>
+4. <section>
+5. <main>
+6. <aside>
+7. <figure>
+8. <figcaption>
+9. <details>
+10. <summary>
+11. <time>
+12. <mark>
+13. <article>
+
+
+
+HTML 5 Input Tags.
+
+1. <datalist>
+2. <button>
+3. <output>
+
+
+HTML 5 Input Attributes.
+
+1. readonly 	
+2. required 	
+3. placeholder	
+4. min 			
+5. max 
+6. step
+7. pattern 		
+8. list 		
+9. autofocus
+
+
+
+HTML 5 Multimedia Tags.
+
+1. <audio>
+2. <video>
+3. <source>
+
+
+1. <video>
+
+<video src="url" autoplay loop controls poster autobuffer muted height="" width="">
+</video>
+
+2. <audio>
+
+<audio src="url" autoplay loop controls autobuffer muted>
+</audio>
+
+
+
+HTML 5 APIS
+
+1. Media API
+2. Text Track API
+3. Drag and Drop API
+4. Application Cache
+5. Server Sent Events
+6. Web Sockets API
+7. IndexedDB API
+8. Storage API
+9. Location API
+
+
+
+
+Location API
+
+ This API is used to provide web applications access to geographical location information of the hosting device.
+
+
+ User location can be fetched by using navigator.geolocation interface. 
+
+ //Step 1 : Raising a request to access user's location.
+
+	Syntax:
+ 	
+ 	navigator.geolocation.getCurrentPosition(success function, failure function);
+
+
+ //Step 2 : Define Success and Failaure function handlers.
+
+ 	function Success(location){
+ 		//Use the location parameter to get the user co-ordinates
+ 	}
+
+ 	function Failure(error){
+ 		//Use the error parameter to get the error message.
+ 	}
