@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Location API</h1>
+	<h3>Latitude : <output id="lat"></output></h3>
+	<h3>Longitude : <output id="lon"></output></h3>
+
+	<div id="mapdiv" style="height:300px;width:100%">
+	</div>
+
+	<script>
+			navigator.geolocation.getCurrentPosition(Success,Failure);
+
+			function Success(location){
+				lat=location.coords.latitude;
+				lon=location.coords.longitude;
+
+				mapdiv=document.getElementById('mapdiv');
+
+		        map = new google.maps.Map(mapdiv, {
+        	  			center: {lat: lat, lng: lon},
+          				zoom: 17
+        			});
+				document.getElementById('lat').innerHTML=lat;
+				document.getElementById('lon').innerHTML=lon;
+			}
+
+			function Failure(result){
+				alert("Error");
+				console.log(result);
+			}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDscQkgZAk8dcUUpn6HsFk4pjGERalxQjw"
+    async defer></script>
+</body>
+</html>

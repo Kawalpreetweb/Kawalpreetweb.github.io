@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>Meter</h3>
+	<meter id="meter" min="1" max="100" value="50"></meter>
+
+	<script>
+		task=setInterval(Update,1000);
+		meter=50;
+
+		function Update(){
+			if(meter%2==0){
+				meter=meter/2;
+			}
+			else{
+				meter=meter*3+1;
+			}
+
+			document.getElementById('meter').value=meter;
+		}
+
+	</script>
+</body>
+</html>
