@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	Name : <input id="name" type="text" name="grocery" autofocus="">
+	<button type="button" id="save">Add Item</button>
+	<button type="button" id="delete">Delete Item</button>
+
+	<h3>Groceries List</h3>
+	<ul id="groceries">
+	</ul>
+
+	<script>
+		$('#save').click(function(){
+			groceries=localStorage.getItem('groceries');
+			if(groceries==null){
+				groceries=[];
+			}
+			else{
+				groceries=JSON.parse(groceries);
+			}
+
+			name=$('#name').val();
+
+			//Check if item is not already saved
+			if(groceries.indexOf(name)==-1){
+				groceries.push(name);
+			}
+			
+			localStorage.setItem('groceries',JSON.stringify(groceries));
+
+			$('#name').val('');
+			location.reload();
+			Display();
+		});
+
+		$('#delete').click(function(){
+			groceries=localStorage.getItem('groceries');
+			if(groceries==null){
+				groceries=[];
+			}
+			else{
+				groceries=JSON.parse(groceries);
+			}
+
+			name=$('#name').val();
+
+			//Check if item is not already saved
+			if(groceries.indexOf(name)!=-1){
+				groceries.splice(groceries.indexOf(name),1);
+			}
+			
+			localStorage.setItem('groceries',JSON.stringify(groceries));
+
+			$('#name').val('');
+			location.reload();
+			Display();
+		});
+
+
+		function Display(){
+			groceries=localStorage.getItem('groceries');
+			if(groceries==null){
+				groceries=[];
+				$('#groceries').append('<li>No Item Found</li>');
+			}
+			else{
+				$('#groceries').html('');
+				groceries=JSON.parse(groceries);
+				for(i=0;i<groceries.length;i++){
+					$('#groceries').append('<li>'+groceries[i]+'</li>');
+				}
+			}
+		}
+
+		Display();
+	</script>
+</body>
+</html>

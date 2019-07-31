@@ -1,0 +1,18 @@
+storage API
+
+1. localStorage 
+2. sessionStorage
+
+
+Functions:
+
+1. setItem(key,value) : Adds a value in storage.
+2. getItem(key) : Returns the value of the specified key.
+3. removeItem(key) : Deletes the specified element from the storage.
+4. clear() : Removes all data from storage.
+
+
+e.g.
+
+localStorage.setItem('name','Kawal');
+name=localStorage.getItem('name');

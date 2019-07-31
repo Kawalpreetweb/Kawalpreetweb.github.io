@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	Name : <input id="name" type="text" name="name">
+	<button type="button" id="save">Save Name</button>
+	<button type="button" id="read">Read Name</button>
+
+	<script>
+		$('#save').click(function(){
+			name=$('#name').val();
+			localStorage.setItem('name',name);
+		});
+
+		$('#read').click(function(){
+			name=localStorage.getItem('name');
+			$('#name').val(name);
+		});
+	</script>
+</body>
+</html>
