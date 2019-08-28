@@ -1,0 +1,152 @@
+Function : A function is a subprogram that performs a specific task or solves a specific problem. A function can be used if a program logic is needed to be executed many times in a program.
+
+n!
+n*(n-1)*(n-2)*(n-3)*..*1
+
+$n=5;
+$fac=1;
+for($i=$n;$i>1;$i--)
+{
+	$fac=$fac*$i;
+}
+
+
+
+
+result=(m!+n!)/p!;
+
+
+
+echo 1;
+echo 2;
+echo 3;
+echo 4;
+echo 5;
+echo 6;
+echo 7;
+echo 8;
+echo 9;
+echo 10;
+
+
+
+$m=5;
+$mfac=1;
+for($i=$m;$i>1;$i--)
+{
+	$mfac=$mfac*$i;
+}
+
+..
+
+$n=5;
+$nfac=1;
+for($i=$n;$i>1;$i--)
+{
+	$nfac=$nfac*$i;
+}
+
+..
+$p=5;
+$pfac=1;
+for($i=$p;$i>1;$i--)
+{
+	$pfac=$pfac*$i;
+}
+
+
+
+
+PHP Function
+
+function Factorial($x)
+{
+	$fac=1;
+	for($i=$x;$i>=1;$i--)
+	{
+		$fac=$fac*$i;
+	}
+	return $fac;
+}
+
+
+$m=5;
+$n=7;
+$p=10;
+$result=Factorial($m)+Factorial($n)/Factorial($p);
+
+
+Program:
+
+Write a function Area which will accept length and breadth as parameters and will return the area of the rectangle.
+
+
+function Area($length,$breadth)
+{
+	$result=$length*$breadth;
+	return $result;
+}
+
+//Function Call
+$result=Area(5,10);
+echo $result;
+
+Write a function Count to accept an array of 10 elements and return the count of the elements where the value is above 500.
+
+
+
+Result : 3
+
+
+function Count($arr)
+{
+	$count=0;
+	foreach($arr as $value)
+	{
+		if($value>500)
+		{
+			$count++;
+		}
+	}
+	return $count;
+}
+
+$arr=array(436,340,650,457,437,870,457,560,780,450);
+
+$result=Count($arr);
+echo $result;
+
+
+Write a function Split which will accept 3 arrays as parameters, the data array and the even array and the odd array. You are required to split the values of the data array in even and odd arrays.
+
+
+function Split($data,$even,$odd)
+{
+	foreach($data as $value)
+	{
+		if($value%2==0)
+		{
+			$even[]=$value;
+		}
+		else
+		{
+			$odd[]=$value;
+		}
+	}
+}
+
+
+$data=array(43,54,34,77,64,60,45,38,56,45);
+$even=array();
+$odd=array();
+
+Split($data);
+
+print_r($even);
+print_r($odd);
+
+
+
+
+
+
