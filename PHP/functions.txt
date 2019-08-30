@@ -81,3 +81,150 @@ Program:
 Write a function Area which will accept length and breadth as parameters and will return the area of the rectangle.
 
 
+Global Variables in PHP
+
+$a=5;
+
+function MyFun()
+{
+	echo $a;
+}
+
+//Calling Function
+MyFun();			//5
+
+
+In PHP a global variable cannot be directly accessed inside a functiotertn body. To access a global variable inside a function scope you may redeclare the global inside function with the help of global keyword. Or, alternatively you may use $GLOBALS super array to access the value of global variable.
+
+#Method 1
+
+$a=5;
+function MyFun()
+{	
+	global $a;
+	echo $a;
+}
+
+#Method 2
+
+$a=5;
+function MyFun()
+{
+	echo $GLOBALS['a'];
+}
+
+
+
+Function Overloading in C++
+
+int Sum(int a,int b){
+	return a+b;
+}
+
+float Sum(float a,float b){
+	return a+b;
+}
+
+Sum(43,54);
+Sum(43.54,54.43);
+
+Without Function Overloading in PHP
+
+function Sum($a,$b)
+{
+	return $a+$b;
+}
+
+Sum(4,5);
+Sum(4.5,3.2);
+
+
+
+Function Overloading with Difference no. of parameters in C++
+
+int Sum(int a,int b){
+	
+}
+
+int Sum(int a,int b,int c){
+	
+}
+
+Sum(5,5);
+Sum(5,5,5);
+
+
+Without Function Overloading Using Optional Parameters
+
+function Sum($a,$b,$c=0)
+{
+	return $a+$b+$c;
+}
+
+echo Sum(5,5);
+echo Sum(5,5,5);
+
+Note: Optional parameters can only be declared from right to left direction. For e.g.
+
+function Sum($a=0,$b,$c)
+{
+	
+}
+
+will be an incorrect declaration.
+
+
+
+
+//Named Arguments
+
+//In C++
+
+Register(String name)
+Register(String name, String gender)
+Register(String name, String gender, int age)
+
+
+//In PHP
+
+function Register($name,$gender='',$age=0)
+{
+	echo "Name : $name <br>";
+	echo "Gender : $gender <br>";
+	echo "Age : $age <br>";	
+}
+
+
+Register("Anil");
+Register("Anil","Male");
+Register("Anil","Male",24);
+Register("Anil",'',23);	
+
+
+Variable Length Argument
+
+function Sum(...$data)
+{
+	$s=0;
+	foreach($data as $value)
+	{
+		$s=$s+$value;
+	}
+	return s;
+}
+
+
+echo Sum(1);
+echo Sum();
+echo Sum(1,2,3,4,5,6,7,8);
+
+
+
+function Profile($name,$highqual,...$skills)
+{
+	...
+}
+
+
+Profile("Anil","MCA","C","C++","Java","PHP","HTML");
+iohurtedgrfhg

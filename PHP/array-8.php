@@ -37,6 +37,23 @@ $arr=array(
 
 ?>
 
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Course</td>
+		<td>Fees</td>
+		<td>Duration</td>
+	</tr>
+	<?php foreach($arr as $user=>$data) { ?>
+	<tr>
+		<td><?php echo $user; ?></td>
+		<?php foreach($data as $value) { ?>
+		<td><?php echo $value; ?></td>
+		<?php } ?>
+	</tr>
+	<?php } ?>
+</table>
+
 
 
 
