@@ -1,0 +1,24 @@
+Form Processing
+
+<form method="GET|POST">
+	Name : <input type="text" name="name">
+	Email : <input type="text" name="email">
+	<input type="submit">
+</form>
+
+
+PHP GET and POST arrays.
+
+$_GET : Use this array to read the form data if the data is uploaded using the GET method.
+
+$_POST : Use this array to read the form data if the data is uploaded using the POST method.
+
+
+
+Default Values for Unfilled Form Fields.
+
+TextBox 			Empty String
+Checkbox			No Data will be uploaded
+Radio 				No Data will be uploaded
+File 				Empty String
+Drop Down List 		Value of the First Option
