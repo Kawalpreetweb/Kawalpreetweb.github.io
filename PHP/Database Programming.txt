@@ -1,0 +1,18 @@
+Database Programming
+
+1. mysqli_connect(server, username, password, database) : Establishes a connection with the database on the specified server. Upon successful connection returns an object of mysqli class. Gives an exception otherwise.
+
+
+2. mysqli_query(connection, query) : Executes an SQL query on the DBMS. 
+		If the query is an INSERT, DELETE or UPDATE query, it will return an integer number specifying the total number of records updated in the database.
+
+		If the query is a SELECT query, it will return an object of mysqli_result class.
+
+		If a query failed to executed, it will return a false value.
+
+
+3. mysqli_error(connection) : Returns the error occured in last executed command if any, otherwise returns an empty string.
+
+4. mysqli_fetch_array(mysqli_result) : Fetches a single record from a mysqli_result object and returns it as an indexed array.
+
+5. mysqli_fetch_assoc(mysqli_result) : Fetches a single record from a mysqli_result object and returns it as an associative array.
