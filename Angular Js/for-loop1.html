@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+</head>
+<body ng-init="cities=['Delhi','Pune','Kolkata'];usercity='Kolkata';">
+	<select>
+		<option  ng-repeat="city in cities|filter:usercity" selected>{{city}}</option>
+	</select>
+
+</body>
+</html>
