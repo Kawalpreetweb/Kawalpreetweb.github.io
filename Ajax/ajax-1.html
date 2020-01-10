@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id="note"></p>
+	<input type="button" value="Download" onclick="Download();">
+
+	<script>
+		function Download()
+		{
+			xhr= new XMLHttpRequest();
+			xhr.open("GET","noted.txt");
+			xhr.send();
+
+			xhr.onreadystatechange=function()
+			{
+
+				if(xhr.readyState==4)
+				{
+					data= xhr.responseText;
+					document.getElementById('note').innerHTML=data;
+				}
+			};
+
+		}
+	</script>
+
+</body>
+</html>
