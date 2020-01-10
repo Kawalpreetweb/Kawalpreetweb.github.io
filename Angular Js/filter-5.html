@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+</head>
+<body ng-init="students=[{id:2,name:'kawl'},{id:1, name:'Ravi'}];">
+	<table>
+		<tr>
+			<td>Id</td>
+			<td>NAME</td>
+		</tr>
+		<tr ng-repeat="student in students | orderBy:'id':false">
+			<td>{{student.id}}</td>
+			<td>{{student.name}}</td>
+		</tr>
+
+	</table>
+
+</body>
+</html>

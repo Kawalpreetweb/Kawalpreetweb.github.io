@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+</head>
+<body ng-init="desc='Jack and jill went to the hill';skills=['c++','c','javascript','php'];num=2368383873">
+	<p>{{desc|limitTo:10}}...<a href="#">read more</a></p>
+	<ul>
+		<li ng-repeat="skill in skills|limitTo:3">{{skill}}</li>
+	</ul>
+	<h3>{{num|limitTo:3}}</h3>
+
+
+</body>
+</html>
