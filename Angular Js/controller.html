@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<title></title>
+	<script src="angular.js"></script>
+</head>
+<body>
+	<div ng-controller="home">
+		{{name}}
+	</div>
+<div ng-controller="about">
+	<h3>Today is:{{today|date}}</h3>
+	{{name}}<br>
+	{{address}}
+</div>
+<script>
+	myapp=angular.module("myapp",[]);
+	myapp.controller("home",function($scope){
+		$scope.name='Ankit';
+	});
+myapp.controller("about",function($scope){
+	$scope.name='Apptech Computer Education';
+	$scope.address='Rohini,Delhi-45';
+	$scope.today=new Date().getTime();
+});
+</script>
+</body>
+</html>
